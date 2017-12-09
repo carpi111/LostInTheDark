@@ -12,8 +12,11 @@
  */
 
 using System;
+using System.Collections;
 using System.Security.Permissions;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class Heartbeat : MonoBehaviour {
     public float HeartRate;
@@ -25,6 +28,7 @@ public class Heartbeat : MonoBehaviour {
     public Light Spotlight;
     public GameObject LostLightGameOverText;
     public GameObject FearGameOverText;
+    public int GameOverTextDelay;
 
     public GameObject[] RedTickMarks;
     public GameObject GrayTickMarks;
@@ -49,7 +53,11 @@ public class Heartbeat : MonoBehaviour {
 
     private AudioSource HeartBeat;
 
+    private LevelController LC;
+    private Scene LoadedLevel;
+
     private void Start() {
+        LoadedLevel = SceneManager.GetActiveScene();
         HeartRate = NormalHeartRate;
         LostLightGameOverText.SetActive (false);
         FearGameOverText.SetActive (false);
@@ -64,6 +72,8 @@ public class Heartbeat : MonoBehaviour {
         }
 
         GrayTickMarks.SetActive(false);
+
+        LC = GameObject.FindWithTag("LevelController").GetComponent<LevelController>();
 
         InvokeRepeating("CountUpDeathTimer", 0.0f, 1.0f);
     }
@@ -216,14 +226,14 @@ public class Heartbeat : MonoBehaviour {
     }
 
     private void CheckHeartRate() {
-        if (HeartRate < MaxHeartRate - 1) {
-            DeathTimer = 0;
-            AtMaxHeartRate = false;
-            foreach (var tickMark in RedTickMarks) {
-                tickMark.SetActive(false);
-            }
-            GrayTickMarks.SetActive(false);
+        if (HeartRate >= MaxHeartRate - 1) return;
+
+        DeathTimer = 0;
+        AtMaxHeartRate = false;
+        foreach (var tickMark in RedTickMarks) {
+            tickMark.SetActive(false);
         }
+        GrayTickMarks.SetActive(false);
     }
 
     private void CountUpDeathTimer() {
@@ -239,9 +249,19 @@ public class Heartbeat : MonoBehaviour {
         // IF DEATH TIMER REACHES 10, PLAYER DIES
         if (DeathTimer >= 10) {
             FearGameOverText.SetActive(true);
-            Time.timeScale = 0.0f;
+//            Time.timeScale = 0f;
+            GetComponent<PlayerController>().enabled = false;
+            GetComponent<Heartbeat>().enabled = false;
             Dead = true;
+//            LC.FadeEffect(LoadedLevel.buildIndex);
+            StartCoroutine(ShowDeathText(GameOverTextDelay));
         }
+    }
+
+    IEnumerator ShowDeathText(int val) {
+        yield return new WaitForSeconds(val);
+
+        LC.FadeEffect(LoadedLevel.buildIndex);
     }
 
     // WHILE SPRINTING, INCREASE ENEMY COUNT BY 1
