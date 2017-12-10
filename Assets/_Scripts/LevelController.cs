@@ -5,28 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour {
 
-	public int LevelIndex;
+	public int NextLevelIndex;
 
 	public Image Black;
 	public Animator Anim;
 
-	public bool ReachedEnd;
-	private Scene LoadedLevel;
+	private bool ReachedEnd;
+	private int LoadedLevelIndex;
 
 	private void Start() {
-		LoadedLevel = SceneManager.GetActiveScene();
-		LevelIndex = LoadedLevel.buildIndex;
+		LoadedLevelIndex  = SceneManager.GetActiveScene().buildIndex;
+	}
+
+	public void FadeEffect() {
+		StartCoroutine(Fading());
 	}
 
 	private void OnTriggerEnter(Collider other) {
-		if (other.CompareTag("Player")) {
-			ReachedEnd = true;
-			StartCoroutine(Fading());
-		}
-	}
+		if (!other.CompareTag("Player")) return;
 
-	public void FadeEffect(int sceneIndex) {
-//		LevelIndex = sceneIndex;
+		ReachedEnd = true;
 		StartCoroutine(Fading());
 	}
 
@@ -34,9 +32,9 @@ public class LevelController : MonoBehaviour {
 		Anim.SetBool("Fade", true);
 		yield return new WaitUntil(() => Black.color.a == 1);
 		if (ReachedEnd) {
-			SceneManager.LoadScene(LevelIndex + 1);
+			SceneManager.LoadScene(NextLevelIndex);
 		} else {
-			SceneManager.LoadScene(LevelIndex);
+			SceneManager.LoadScene(LoadedLevelIndex);
 		}
 	}
 }

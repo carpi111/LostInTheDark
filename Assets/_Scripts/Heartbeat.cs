@@ -3,7 +3,7 @@
  * 2260921
  * carpi111@mail.chapman.edu
  * CPSC 344-01
- * Lost in the Dark - Beta
+ * Lost in the Dark
  *
  * Controls the particle system relating to
  *     the player's heart rate throughout the
@@ -13,10 +13,7 @@
 
 using System;
 using System.Collections;
-using System.Security.Permissions;
 using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.SceneManagement;
 
 public class Heartbeat : MonoBehaviour {
     public float HeartRate;
@@ -54,13 +51,11 @@ public class Heartbeat : MonoBehaviour {
     private AudioSource HeartBeat;
 
     private LevelController LC;
-    private Scene LoadedLevel;
 
     private void Start() {
-        LoadedLevel = SceneManager.GetActiveScene();
         HeartRate = NormalHeartRate;
-        LostLightGameOverText.SetActive (false);
-        FearGameOverText.SetActive (false);
+        LostLightGameOverText.SetActive(false);
+        FearGameOverText.SetActive(false);
         Player = GameObject.FindWithTag("Player");
         MoveSpeed = gameObject.GetComponent<Movement>().moveSpeed;
         SprintSpeed = GetComponent<Movement>().sprintSpeed;
@@ -127,12 +122,6 @@ public class Heartbeat : MonoBehaviour {
         // IF WITHIN 1 OF MAX, AT MAX HEART RATE
         if (HeartRate >= MaxHeartRate - 1) {
             AtMaxHeartRate = true;
-//        } else { // OTHERWISE RESET DEATH TIMER AND TICK MARKS
-//            DeathTimer = 0;
-//            AtMaxHeartRate = false;
-//            foreach (var tickMark in TickMarks) {
-//                tickMark.SetActive(false);
-//            }
         }
     }
 
@@ -150,8 +139,12 @@ public class Heartbeat : MonoBehaviour {
 
             if (HeartRate < MinHeartRate) {
                 LostLightGameOverText.SetActive(true);
-                gameObject.SetActive(false);
-                Time.timeScale = 0.0f;
+//                gameObject.SetActive(false);
+//                Time.timeScale = 0.0f;
+                StartCoroutine(ShowDeathText(GameOverTextDelay));
+//                GetComponent<PlayerController>().enabled = false;
+//                GetComponent<Heartbeat>().enabled = false;
+//                Dead = true;
             }
         }
     }
@@ -249,11 +242,9 @@ public class Heartbeat : MonoBehaviour {
         // IF DEATH TIMER REACHES 10, PLAYER DIES
         if (DeathTimer >= 10) {
             FearGameOverText.SetActive(true);
-//            Time.timeScale = 0f;
             GetComponent<PlayerController>().enabled = false;
-            GetComponent<Heartbeat>().enabled = false;
+//            GetComponent<Heartbeat>().enabled = false;
             Dead = true;
-//            LC.FadeEffect(LoadedLevel.buildIndex);
             StartCoroutine(ShowDeathText(GameOverTextDelay));
         }
     }
@@ -261,7 +252,7 @@ public class Heartbeat : MonoBehaviour {
     IEnumerator ShowDeathText(int val) {
         yield return new WaitForSeconds(val);
 
-        LC.FadeEffect(LoadedLevel.buildIndex);
+        LC.FadeEffect();
     }
 
     // WHILE SPRINTING, INCREASE ENEMY COUNT BY 1

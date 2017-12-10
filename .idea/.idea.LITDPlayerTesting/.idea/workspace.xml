@@ -46,14 +46,13 @@
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1512854572192" expanded="true" signature="6:101" ph="..." />
-                <marker date="1512854572192" expanded="true" signature="148:873" ph="{...}" />
-                <marker date="1512854572192" expanded="true" signature="297:387" ph="{...}" />
-                <marker date="1512854572192" expanded="true" signature="434:529" ph="{...}" />
-                <marker date="1512854572192" expanded="true" signature="470:526" ph="{...}" />
-                <marker date="1512854572192" expanded="true" signature="571:632" ph="{...}" />
-                <marker date="1512854572192" expanded="true" signature="664:871" ph="{...}" />
-                <marker date="1512854572192" expanded="true" signature="770:818" ph="{...}" />
+                <marker date="1512863247640" expanded="true" signature="6:101" ph="..." />
+                <marker date="1512863247640" expanded="true" signature="148:824" ph="{...}" />
+                <marker date="1512863247640" expanded="true" signature="305:373" ph="{...}" />
+                <marker date="1512863247640" expanded="true" signature="401:433" ph="{...}" />
+                <marker date="1512863247640" expanded="true" signature="480:577" ph="{...}" />
+                <marker date="1512863247640" expanded="true" signature="609:822" ph="{...}" />
+                <marker date="1512863247640" expanded="true" signature="715:763" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -86,42 +85,43 @@
             <state relative-caret-position="-53">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1512855519845" expanded="true" signature="0:291" ph="/* Vince Carpino ... */" />
-                <marker date="1512855519845" expanded="true" signature="299:450" ph="..." />
-                <marker date="1512855519845" expanded="true" signature="491:9200" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="1619:2364" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="2119:2169" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="2392:3556" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="2833:3370" ph="/* if (IsHoldingBreath) { ... */" />
-                <marker date="1512855519845" expanded="true" signature="3603:4117" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="3819:4111" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="3856:4101" ph="/* } else { // OTHERWISE RESET DEATH TIMER AND TICK MARKS ... */" />
-                <marker date="1512855519845" expanded="true" signature="4155:4243" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="4274:4682" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="4425:4676" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="4512:4666" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="4684:4926" ph="/* public void SetIsHoldingBreath(bool val) { ... */" />
-                <marker date="1512855519845" expanded="true" signature="4954:5229" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="5263:6016" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="5381:5574" ph="/* if (Input.GetKey(KeyCode.Space) &amp;&amp; HeartRate &gt; MinHeartRate) ... */" />
-                <marker date="1512855519845" expanded="true" signature="5667:5734" ph="/* StopHoldingBreath(); ... */" />
-                <marker date="1512855519845" expanded="true" signature="5763:5887" ph="/* if (IsHoldingBreath) ... */" />
-                <marker date="1512855519845" expanded="true" signature="5933:5970" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="6055:6536" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="6575:6679" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="6717:6815" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="6855:6922" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="6958:7211" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="7115:7165" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="7250:7969" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="7394:7532" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="7614:7963" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="8010:8111" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="8194:9198" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="8521:8626" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="8668:8822" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="8867:9192" ph="{...}" />
-                <marker date="1512855519845" expanded="true" signature="9037:9182" ph="/* if (Player.GetComponent&lt;PlayerController&gt;().EnemyCount &gt; 0) ... */" />
+                <marker date="1512864032768" expanded="true" signature="0:284" ph="/* Vince Carpino ... */" />
+                <marker date="1512864032768" expanded="true" signature="292:344" ph="..." />
+                <marker date="1512864032768" expanded="true" signature="385:8884" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="1482:2172" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="1927:1977" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="2200:3364" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="2641:3178" ph="/* if (IsHoldingBreath) { ... */" />
+                <marker date="1512864032768" expanded="true" signature="3411:3679" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="3627:3673" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="3717:3805" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="3836:4474" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="3987:4468" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="4074:4458" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="4131:4218" ph="/* gameObject.SetActive(false); ... */" />
+                <marker date="1512864032768" expanded="true" signature="4285:4444" ph="/* GetComponent&lt;PlayerController&gt;().enabled = false; ... */" />
+                <marker date="1512864032768" expanded="true" signature="4476:4718" ph="/* public void SetIsHoldingBreath(bool val) { ... */" />
+                <marker date="1512864032768" expanded="true" signature="4746:5021" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="5055:5808" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="5173:5366" ph="/* if (Input.GetKey(KeyCode.Space) &amp;&amp; HeartRate &gt; MinHeartRate) ... */" />
+                <marker date="1512864032768" expanded="true" signature="5459:5526" ph="/* StopHoldingBreath(); ... */" />
+                <marker date="1512864032768" expanded="true" signature="5555:5679" ph="/* if (IsHoldingBreath) ... */" />
+                <marker date="1512864032768" expanded="true" signature="5725:5762" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="5847:6328" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="6367:6471" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="6509:6607" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="6647:6714" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="6750:7003" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="6907:6957" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="7042:7675" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="7186:7324" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="7406:7669" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="7716:7795" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="7878:8882" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="8205:8310" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="8352:8506" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="8551:8876" ph="{...}" />
+                <marker date="1512864032768" expanded="true" signature="8721:8866" ph="/* if (Player.GetComponent&lt;PlayerController&gt;().EnemyCount &gt; 0) ... */" />
               </folding>
             </state>
           </provider>
@@ -216,11 +216,11 @@
       <file leaf-file-name="PlayerController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="828">
+            <state relative-caret-position="792">
               <caret line="46" column="4" lean-forward="false" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
               <folding>
                 <marker date="1512814916539" expanded="true" signature="0:153" ph="/* Vince Carpino ... */" />
-                <marker date="1512814916539" expanded="true" signature="161:244" ph="..." />
+                <marker date="1512814916539" expanded="false" signature="161:244" ph="..." />
                 <marker date="1512814916539" expanded="true" signature="292:1749" ph="{...}" />
                 <marker date="1512814916539" expanded="true" signature="485:533" ph="{...}" />
                 <marker date="1512814916539" expanded="true" signature="561:643" ph="{...}" />
@@ -537,28 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="46" column="4" lean-forward="false" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
-          <folding>
-            <marker date="1512814916539" expanded="true" signature="0:153" ph="/* Vince Carpino ... */" />
-            <marker date="1512814916539" expanded="true" signature="161:244" ph="..." />
-            <marker date="1512814916539" expanded="true" signature="292:1749" ph="{...}" />
-            <marker date="1512814916539" expanded="true" signature="485:533" ph="{...}" />
-            <marker date="1512814916539" expanded="true" signature="561:643" ph="{...}" />
-            <marker date="1512814916539" expanded="true" signature="676:960" ph="{...}" />
-            <marker date="1512814916539" expanded="true" signature="1006:1088" ph="{...}" />
-            <marker date="1512814916539" expanded="true" signature="1134:1207" ph="{...}" />
-            <marker date="1512814916539" expanded="true" signature="1257:1333" ph="{...}" />
-            <marker date="1512814916539" expanded="true" signature="1259:1327" ph="/* if (other.CompareTag(&quot;Enemy&quot;)) ... */" />
-            <marker date="1512814916539" expanded="true" signature="1382:1458" ph="{...}" />
-            <marker date="1512814916539" expanded="true" signature="1384:1452" ph="/* if (other.CompareTag(&quot;Enemy&quot;)) ... */" />
-            <marker date="1512814916539" expanded="true" signature="1492:1747" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Weiss_Carpino/Assets/_Scripts/Unit.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -674,19 +652,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="46" column="4" lean-forward="false" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+          <folding>
+            <marker date="1512814916539" expanded="true" signature="0:153" ph="/* Vince Carpino ... */" />
+            <marker date="1512814916539" expanded="false" signature="161:244" ph="..." />
+            <marker date="1512814916539" expanded="true" signature="292:1749" ph="{...}" />
+            <marker date="1512814916539" expanded="true" signature="485:533" ph="{...}" />
+            <marker date="1512814916539" expanded="true" signature="561:643" ph="{...}" />
+            <marker date="1512814916539" expanded="true" signature="676:960" ph="{...}" />
+            <marker date="1512814916539" expanded="true" signature="1006:1088" ph="{...}" />
+            <marker date="1512814916539" expanded="true" signature="1134:1207" ph="{...}" />
+            <marker date="1512814916539" expanded="true" signature="1257:1333" ph="{...}" />
+            <marker date="1512814916539" expanded="true" signature="1259:1327" ph="/* if (other.CompareTag(&quot;Enemy&quot;)) ... */" />
+            <marker date="1512814916539" expanded="true" signature="1382:1458" ph="{...}" />
+            <marker date="1512814916539" expanded="true" signature="1384:1452" ph="/* if (other.CompareTag(&quot;Enemy&quot;)) ... */" />
+            <marker date="1512814916539" expanded="true" signature="1492:1747" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/LevelController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1512854572192" expanded="true" signature="6:101" ph="..." />
-            <marker date="1512854572192" expanded="true" signature="148:873" ph="{...}" />
-            <marker date="1512854572192" expanded="true" signature="297:387" ph="{...}" />
-            <marker date="1512854572192" expanded="true" signature="434:529" ph="{...}" />
-            <marker date="1512854572192" expanded="true" signature="470:526" ph="{...}" />
-            <marker date="1512854572192" expanded="true" signature="571:632" ph="{...}" />
-            <marker date="1512854572192" expanded="true" signature="664:871" ph="{...}" />
-            <marker date="1512854572192" expanded="true" signature="770:818" ph="{...}" />
+            <marker date="1512863247640" expanded="true" signature="6:101" ph="..." />
+            <marker date="1512863247640" expanded="true" signature="148:824" ph="{...}" />
+            <marker date="1512863247640" expanded="true" signature="305:373" ph="{...}" />
+            <marker date="1512863247640" expanded="true" signature="401:433" ph="{...}" />
+            <marker date="1512863247640" expanded="true" signature="480:577" ph="{...}" />
+            <marker date="1512863247640" expanded="true" signature="609:822" ph="{...}" />
+            <marker date="1512863247640" expanded="true" signature="715:763" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -696,42 +695,43 @@
         <state relative-caret-position="-53">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1512855519845" expanded="true" signature="0:291" ph="/* Vince Carpino ... */" />
-            <marker date="1512855519845" expanded="true" signature="299:450" ph="..." />
-            <marker date="1512855519845" expanded="true" signature="491:9200" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="1619:2364" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="2119:2169" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="2392:3556" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="2833:3370" ph="/* if (IsHoldingBreath) { ... */" />
-            <marker date="1512855519845" expanded="true" signature="3603:4117" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="3819:4111" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="3856:4101" ph="/* } else { // OTHERWISE RESET DEATH TIMER AND TICK MARKS ... */" />
-            <marker date="1512855519845" expanded="true" signature="4155:4243" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="4274:4682" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="4425:4676" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="4512:4666" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="4684:4926" ph="/* public void SetIsHoldingBreath(bool val) { ... */" />
-            <marker date="1512855519845" expanded="true" signature="4954:5229" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="5263:6016" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="5381:5574" ph="/* if (Input.GetKey(KeyCode.Space) &amp;&amp; HeartRate &gt; MinHeartRate) ... */" />
-            <marker date="1512855519845" expanded="true" signature="5667:5734" ph="/* StopHoldingBreath(); ... */" />
-            <marker date="1512855519845" expanded="true" signature="5763:5887" ph="/* if (IsHoldingBreath) ... */" />
-            <marker date="1512855519845" expanded="true" signature="5933:5970" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="6055:6536" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="6575:6679" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="6717:6815" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="6855:6922" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="6958:7211" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="7115:7165" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="7250:7969" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="7394:7532" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="7614:7963" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="8010:8111" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="8194:9198" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="8521:8626" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="8668:8822" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="8867:9192" ph="{...}" />
-            <marker date="1512855519845" expanded="true" signature="9037:9182" ph="/* if (Player.GetComponent&lt;PlayerController&gt;().EnemyCount &gt; 0) ... */" />
+            <marker date="1512864032768" expanded="true" signature="0:284" ph="/* Vince Carpino ... */" />
+            <marker date="1512864032768" expanded="true" signature="292:344" ph="..." />
+            <marker date="1512864032768" expanded="true" signature="385:8884" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="1482:2172" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="1927:1977" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="2200:3364" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="2641:3178" ph="/* if (IsHoldingBreath) { ... */" />
+            <marker date="1512864032768" expanded="true" signature="3411:3679" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="3627:3673" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="3717:3805" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="3836:4474" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="3987:4468" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="4074:4458" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="4131:4218" ph="/* gameObject.SetActive(false); ... */" />
+            <marker date="1512864032768" expanded="true" signature="4285:4444" ph="/* GetComponent&lt;PlayerController&gt;().enabled = false; ... */" />
+            <marker date="1512864032768" expanded="true" signature="4476:4718" ph="/* public void SetIsHoldingBreath(bool val) { ... */" />
+            <marker date="1512864032768" expanded="true" signature="4746:5021" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="5055:5808" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="5173:5366" ph="/* if (Input.GetKey(KeyCode.Space) &amp;&amp; HeartRate &gt; MinHeartRate) ... */" />
+            <marker date="1512864032768" expanded="true" signature="5459:5526" ph="/* StopHoldingBreath(); ... */" />
+            <marker date="1512864032768" expanded="true" signature="5555:5679" ph="/* if (IsHoldingBreath) ... */" />
+            <marker date="1512864032768" expanded="true" signature="5725:5762" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="5847:6328" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="6367:6471" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="6509:6607" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="6647:6714" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="6750:7003" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="6907:6957" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="7042:7675" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="7186:7324" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="7406:7669" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="7716:7795" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="7878:8882" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="8205:8310" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="8352:8506" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="8551:8876" ph="{...}" />
+            <marker date="1512864032768" expanded="true" signature="8721:8866" ph="/* if (Player.GetComponent&lt;PlayerController&gt;().EnemyCount &gt; 0) ... */" />
           </folding>
         </state>
       </provider>
