@@ -10,6 +10,8 @@ public class LevelController : MonoBehaviour {
 	public Image Black;
 	public Animator Anim;
 
+	public GameObject[] WallsToToggleOff;
+
 	private bool ReachedEnd;
 	private int LoadedLevelIndex;
 
@@ -25,7 +27,18 @@ public class LevelController : MonoBehaviour {
 		if (!other.CompareTag("Player")) return;
 
 		ReachedEnd = true;
+
+		foreach (var w in WallsToToggleOff) {
+			w.SetActive(false);
+		}
+
+		StartCoroutine(WaitForTime(30f));
+
 		StartCoroutine(Fading());
+	}
+
+	private IEnumerator WaitForTime(float val) {
+		yield return new WaitForSeconds(val);
 	}
 
 	private IEnumerator Fading() {

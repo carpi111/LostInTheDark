@@ -1,24 +1,31 @@
-﻿/*
- * Akash Arora & Bobby Kain
- * arora110@mail.chapman.edu & kain102@mail.chapman.edu
- * CPSC 344-01
- * Lost in the Dark
- *
- * Loads tutorial level when Play button is pressed.
- */
-
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 using UnityEngine.SceneManagement;
+
+
 
 public class Menu : MonoBehaviour {
 
 	public Canvas MainCanvas;
+    public AudioSource audio;
+    public string sceneToSwitchTo;
 
 	public void awake() {
 
 	}
 
 	public void loadOn() {
-		SceneManager.LoadScene("Tutorial");
+        StartCoroutine(MyCoroutine());
 	}
+
+    IEnumerator MyCoroutine()
+    {
+        audio.Play();
+
+        //Wait until clip finish playing
+         yield return new WaitForSeconds (audio.clip.length);
+
+		SceneManager.LoadScene(sceneToSwitchTo);
+    }
 }

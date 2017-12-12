@@ -17,7 +17,7 @@ using UnityEngine;
 
 public class Heartbeat : MonoBehaviour {
 
-    public GameManager GM;
+    private GameManager GM;
 
     public float HeartRate;
     public float HoldBreathScale;
@@ -25,8 +25,9 @@ public class Heartbeat : MonoBehaviour {
     public float RingSizeDivisor;
     public float SpotlightDivisor;
     public uint GameOverTextDelay;
+    public ParticleSystem HeartBeatPs;
 
-    private ParticleSystem HeartBeatPs;
+//    private ParticleSystem HeartBeatPs;
     private Light Spotlight;
     private GameObject LostLightGameOverText;
     private GameObject FearGameOverText;

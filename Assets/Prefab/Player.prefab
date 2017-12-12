@@ -273,7 +273,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -339,13 +339,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 196ee4c191b8d4689bd8a4ec9fac75f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GM: {fileID: 0}
   HeartRate: 0
   HoldBreathScale: 0.04
   RecoveryRate: 0.03
   RingSizeDivisor: 2
   SpotlightDivisor: 1.15
   GameOverTextDelay: 2
+  HeartBeatPs: {fileID: 198743069750246900}
   MinHeartRate: 12
   NormalHeartRate: 25
   MaxHeartRate: 85
