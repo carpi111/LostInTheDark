@@ -16,19 +16,23 @@ using System.Collections;
 using UnityEngine;
 
 public class Heartbeat : MonoBehaviour {
+
+    public GameManager GM;
+
     public float HeartRate;
     public float HoldBreathScale;
     public float RecoveryRate;
     public float RingSizeDivisor;
     public float SpotlightDivisor;
-    public ParticleSystem HeartBeatPs;
-    public Light Spotlight;
-    public GameObject LostLightGameOverText;
-    public GameObject FearGameOverText;
-    public int GameOverTextDelay;
+    public uint GameOverTextDelay;
 
-    public GameObject[] RedTickMarks;
-    public GameObject GrayTickMarks;
+    private ParticleSystem HeartBeatPs;
+    private Light Spotlight;
+    private GameObject LostLightGameOverText;
+    private GameObject FearGameOverText;
+
+    private GameObject[] RedTickMarks;
+    private GameObject GrayTickMarks;
 
     private readonly Color _red    = new Color (1.000f, 0.266f, 0.266f);
     private readonly Color _yellow = new Color (1.000f, 0.984f, 0.433f);
@@ -38,6 +42,7 @@ public class Heartbeat : MonoBehaviour {
     private GameObject Player;
     private float MoveSpeed;
     private float SprintSpeed;
+    private float HoldBreathSpeed;
     private bool AtMaxHeartRate;
     private bool Dead;
     private bool IsSprinting;
@@ -46,19 +51,30 @@ public class Heartbeat : MonoBehaviour {
     public uint NormalHeartRate = 25;
     public uint MaxHeartRate    = 85;
 
-    private int DeathTimer;
+    private uint DeathTimer;
 
     private AudioSource HeartBeat;
 
     private LevelController LC;
 
     private void Start() {
+        GM = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+
+        LC = GM.LC;
+        Player = GM.Player;
+        Spotlight = GM.Spotlight;
+        HeartBeatPs = GM.HeartBeatPs;
+        RedTickMarks = GM.RedTickMarks;
+        GrayTickMarks = GM.GrayTickMarks;
+        FearGameOverText = GM.FearGOText;
+        LostLightGameOverText = GM.LostLightGOText;
+
         HeartRate = NormalHeartRate;
-        LostLightGameOverText.SetActive(false);
         FearGameOverText.SetActive(false);
-        Player = GameObject.FindWithTag("Player");
-        MoveSpeed = gameObject.GetComponent<Movement>().moveSpeed;
+        LostLightGameOverText.SetActive(false);
+        MoveSpeed = GetComponent<Movement>().moveSpeed;
         SprintSpeed = GetComponent<Movement>().sprintSpeed;
+        HoldBreathSpeed = GetComponent<Movement>().HoldingBreathSpeed;
 
         HeartBeat = GameObject.FindGameObjectWithTag("SM").GetComponent<AudioSource>();
 
@@ -116,7 +132,6 @@ public class Heartbeat : MonoBehaviour {
     public void IncreaseHeartRate(float val) {
         if (HeartRate >= MaxHeartRate) return;
 
-        // WHILE HEART RATE < MAX, INCREASE IT
         HeartRate += val;
 
         // IF WITHIN 1 OF MAX, AT MAX HEART RATE
@@ -132,17 +147,16 @@ public class Heartbeat : MonoBehaviour {
 
     public void HoldBreath() {
 //        IsHoldingBreath = true;
-        gameObject.GetComponent<Movement>().moveSpeed = MoveSpeed / 1.25f;
+        GetComponent<Movement>().moveSpeed = HoldBreathSpeed;
 
         if (HeartRate >= MinHeartRate) {
             HeartRate -= HoldBreathScale;
 
             if (HeartRate < MinHeartRate) {
                 LostLightGameOverText.SetActive(true);
-//                gameObject.SetActive(false);
 //                Time.timeScale = 0.0f;
                 StartCoroutine(ShowDeathText(GameOverTextDelay));
-//                GetComponent<PlayerController>().enabled = false;
+                GetComponent<PlayerController>().enabled = false;
 //                GetComponent<Heartbeat>().enabled = false;
 //                Dead = true;
             }
@@ -160,7 +174,7 @@ public class Heartbeat : MonoBehaviour {
 
     public void Recover() {
         IsHoldingBreath = false;
-        gameObject.GetComponent<Movement>().moveSpeed = MoveSpeed;
+        GetComponent<Movement>().moveSpeed = MoveSpeed;
 
         if (HeartRate >= NormalHeartRate)
             HeartRate -= RecoveryRate;
@@ -243,13 +257,14 @@ public class Heartbeat : MonoBehaviour {
         if (DeathTimer >= 10) {
             FearGameOverText.SetActive(true);
             GetComponent<PlayerController>().enabled = false;
-//            GetComponent<Heartbeat>().enabled = false;
+            GetComponent<Heartbeat>().enabled = false;
+            GetComponent<Movement>().enabled = false;
             Dead = true;
             StartCoroutine(ShowDeathText(GameOverTextDelay));
         }
     }
 
-    IEnumerator ShowDeathText(int val) {
+    IEnumerator ShowDeathText(uint val) {
         yield return new WaitForSeconds(val);
 
         LC.FadeEffect();

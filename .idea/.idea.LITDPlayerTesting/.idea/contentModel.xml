@@ -9,9 +9,10 @@
         <e p="_Scripts" t="Include">
           <e p="EnemyController.cs" t="Include" />
           <e p="EnemyFollow.cs" t="Include" />
-          <e p="FootPrint.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
           <e p="HearingTrigger.cs" t="Include" />
           <e p="Heartbeat.cs" t="Include" />
+          <e p="LevelController.cs" t="Include" />
           <e p="Menu.cs" t="Include" />
           <e p="Movement.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />

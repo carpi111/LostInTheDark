@@ -3,12 +3,11 @@
  * 2260921
  * carpi111@mail.chapman.edu
  * CPSC 344-01
- * Lost in the Dark - Beta
+ * Lost in the Dark
  *
  * Controls player movement and enemy count.
  */
 
-using System.Xml.Schema;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 

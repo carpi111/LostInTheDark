@@ -22,11 +22,12 @@ public class Movement : MonoBehaviour {
 	private Vector3 lastPosition;
 	public float moveSpeed;
 	public float sprintSpeed;
+	public float HoldingBreathSpeed;
 	private bool onGround;
 
 	//Is used to make sure that the foot doesn't spam drop. If it
-	private bool isDropping = false;
-	private bool lOrR = false;
+	private bool isDropping;
+	private bool lOrR;
 
 	public bool IsEnemy;
 
@@ -35,7 +36,6 @@ public class Movement : MonoBehaviour {
 
 	AudioSource audio;
 
-	// Use this for initialization
 	void Start () {
 //		audio = GetComponent<AudioSource>();
 //		audio.Play();
@@ -43,7 +43,6 @@ public class Movement : MonoBehaviour {
         prevPosition = Vector3.zero;
 	}
 
-	// Update is called once per frame
 	void Update () {
         currentPosition = gameObject.transform.position;
 //		if(Input.GetButton("Vertical")){
@@ -71,7 +70,7 @@ public class Movement : MonoBehaviour {
 			transform.Translate(x, 0f, z);
 //		if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.S)) {
 //                if (CrossPlatformInputManager.GetAxis("Horizontal") || CrossPlatformInputManager.GetAxis("Vertical")) {
-			if (x > 0.0f || z > 0.0f) {
+			if (x != 0.0f || z != 0.0f) {
 				//If you just started moving again, make sure you delete those special footprints
 				//that were instantiated when you decided to stand still.
 				if (stillFeet == 2) {

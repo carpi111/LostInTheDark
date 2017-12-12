@@ -228,7 +228,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!54 &54755275704580238
 Rigidbody:
@@ -314,6 +314,7 @@ MonoBehaviour:
     type: 2}
   moveSpeed: 8
   sprintSpeed: 11
+  HoldingBreathSpeed: 6
   IsEnemy: 0
 --- !u!114 &114597283919037234
 MonoBehaviour:
@@ -338,28 +339,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 196ee4c191b8d4689bd8a4ec9fac75f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GM: {fileID: 0}
   HeartRate: 0
   HoldBreathScale: 0.04
   RecoveryRate: 0.03
   RingSizeDivisor: 2
   SpotlightDivisor: 1.15
-  HeartBeatPs: {fileID: 198743069750246900}
-  Spotlight: {fileID: 108844692881305712}
-  LostLightGameOverText: {fileID: 0}
-  FearGameOverText: {fileID: 0}
   GameOverTextDelay: 2
-  RedTickMarks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  GrayTickMarks: {fileID: 0}
   MinHeartRate: 12
   NormalHeartRate: 25
   MaxHeartRate: 85
